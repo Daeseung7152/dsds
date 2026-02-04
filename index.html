@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>나의 첫 배포</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve Clone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, Vercel!</h1>
-    <p>이제 여기에 코드를 채워나갈 거예요.</p>
+    <div id="app">
+        <!-- Sidebar: Resources -->
+        <aside id="sidebar">
+            <h3>자원 (Resources)</h3>
+            <div id="resource-container">
+                <!-- Resources will be injected here via JS -->
+            </div>
+        </aside>
+
+        <!-- Main Content: Actions -->
+        <main>
+            <nav id="main-nav">
+                <button class="tab-btn active" data-tab="evolution">진화 (Evolution)</button>
+                <button class="tab-btn" data-tab="civilization" style="display:none;">문명 (Civilization)</button>
+                <button class="tab-btn" data-tab="science" style="display:none;">과학 (Science)</button>
+            </nav>
+
+            <div id="content-area">
+                <div id="evolution" class="tab-content active">
+                    <h2>원시 수프 (Primordial Soup)</h2>
+                    <p>생명의 시작입니다.</p>
+                    <div class="action-group" id="evolution-actions">
+                        <!-- Actions injected here -->
+                    </div>
+                </div>
+                
+                <div id="civilization" class="tab-content">
+                    <h2>정착지</h2>
+                    <div class="action-group" id="civ-actions"></div>
+                </div>
+
+                <div id="science" class="tab-content">
+                    <h2>연구</h2>
+                    <div class="action-group" id="science-actions"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel: Logs -->
+        <div id="log-panel">
+            <h3>기록 (Log)</h3>
+            <div id="log-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
