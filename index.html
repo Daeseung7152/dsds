@@ -1,60 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>유물 발굴 타이쿤</title>
-    <style>
-        body { text-align: center; font-family: sans-serif; background: #f4f4f4; }
-        #gold { font-size: 2em; color: #d4af37; }
-        button { padding: 15px 30px; font-size: 1.2em; cursor: pointer; }
-        .shop { margin-top: 30px; padding: 20px; border-top: 2px solid #ddd; }
-    </style>
+    <title>나의 첫 배포</title>
 </head>
 <body>
-    <h1>⛏️ 유물 발굴 주식회사</h1>
-    <div id="gold">0 Gold</div>
-    <br>
-    <button onclick="dig()">발굴하기!</button>
-
-    <div class="shop">
-        <p>상점 (자동 생산)</p>
-        <button id="helperBtn" onclick="buyHelper()">인턴 고용 (가격: 10 Gold)</button>
-        <p id="helperCount">보유 인턴: 0명</p>
-    </div>
-
-    <script>
-        let gold = 0;
-        let helpers = 0;
-        let helperPrice = 10;
-
-        function dig() {
-            gold += 1;
-            updateDisplay();
-        }
-
-        function buyHelper() {
-            if (gold >= helperPrice) {
-                gold -= helperPrice;
-                helpers += 1;
-                helperPrice = Math.floor(helperPrice * 1.5); // 가격 상승
-                updateDisplay();
-            } else {
-                alert("골드가 부족합니다!");
-            }
-        }
-
-        function updateDisplay() {
-            document.getElementById('gold').innerText = gold + " Gold";
-            document.getElementById('helperBtn').innerText = `인턴 고용 (가격: ${helperPrice} Gold)`;
-            document.getElementById('helperCount').innerText = `보유 인턴: ${helpers}명`;
-        }
-
-        // 1초마다 자동 실행 (방치형의 핵심!)
-        setInterval(() => {
-            if (helpers > 0) {
-                gold += helpers;
-                updateDisplay();
-            }
-        }, 1000);
-    </script>
+    <h1>Hello, Vercel!</h1>
+    <p>이제 여기에 코드를 채워나갈 거예요.</p>
 </body>
 </html>
